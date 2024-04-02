@@ -6,6 +6,13 @@ authors = [{ name = "Magsen Chebini", email = "magsen.che@gmail.com" }]
 dependencies = [
     "black>=24.3.0",
     "catex @ file:///${PROJECT_ROOT}/",
+    "ipykernel>=6.29.4",
+    "matplotlib>=3.8.3",
+    "einops>=0.7.0",
+    "numpy>=1.26.4",
+    "tqdm>=4.66.2",
+    "torch>=2.0.1",
+    "torchvision>=0.15.2",
 ]
 requires-python = "==3.9.*"
 readme = "README.md"
