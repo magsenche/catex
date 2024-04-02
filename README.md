@@ -1,5 +1,7 @@
 # catex
-This project aims to generate textures using Neural Cellular Automata (NCA).
+This project aims to generate textures using Neural Cellular Automata (NCA). It is heavily inspired by [Self-Organising Textures](https://distill.pub/selforg/2021/textures/)
+
+It uses vgg style loss with [a sliced Wasserstein loss for neural texture synthesis](https://arxiv.org/pdf/2006.07229.pdf)
 
 ## Setup
 1. Install dependencies from `pyproject.toml` e.g. using pdm: `pdm install`
@@ -18,3 +20,12 @@ The Neural Cellular Automata (NCA) is a dynamic algorithm where the state of cel
 **Result**
 
 ![](assets/poc/result.gif)
+
+## Goal oriented CA
+Overcome Cellular Automata limitation to generate a unique target (the one it was trained on) by adding dedicated hidden channels that are optimized for a specific target.
+
+The resulting values forms a **footprint** of a pattern: by initializing different footprint on a same grid, a single cellular automata can generate different patterns.
+
+You can also consider mixing or interpoling footprint for **zero-shot texture generation**.
+
+Check the goal [experiment script](experiment/main.py) and the [notebook](demo/goal.ipynb)

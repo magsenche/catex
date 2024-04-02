@@ -1,7 +1,7 @@
 [project]
 name = "catex"
 version = "0.1.0"
-description = "Default template for PDM package"
+description = "Texture generation with Neural Cellular Automatas"
 authors = [{ name = "Magsen Chebini", email = "magsen.che@gmail.com" }]
 dependencies = [
     "black>=24.3.0",
@@ -13,6 +13,7 @@ dependencies = [
     "tqdm>=4.66.2",
     "torch>=2.0.1",
     "torchvision>=0.15.2",
+    "scikit-learn>=1.4.1.post1",
 ]
 requires-python = "==3.9.*"
 readme = "README.md"
@@ -24,6 +25,7 @@ distribution = false
 
 [tool.pdm.scripts]
 _.env_file = ".env"
+exp = "python3 experiment/main.py"
 
 [tool.black]
 line-length = 88
