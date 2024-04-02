@@ -1,0 +1,25 @@
+[project]
+name = "catex"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [{ name = "Magsen Chebini", email = "magsen.che@gmail.com" }]
+dependencies = [
+    "black>=24.3.0",
+    "catex @ file:///${PROJECT_ROOT}/",
+]
+requires-python = "==3.9.*"
+readme = "README.md"
+license = { text = "MIT" }
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+_.env_file = ".env"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
